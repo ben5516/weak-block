@@ -1,0 +1,340 @@
+* Build initiated.
+  :PROPERTIES:
+  :platform: iPhoneSimulator
+  :time: 11:33:42.630
+  :ruby_compiler: /Library/RubyMotion/bin/ruby
+  :c_compiler: /Applications/Xcode-13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+  :cxx_compiler: /Applications/Xcode-13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  :archs: ["x86_64"]
+  :END:
+** Resource Directories
+- /Users/bengovero/Downloads/weak-block/resources
+** BridgeSupport Files
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/RubyMotion.bridgesupport
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/UIKit.bridgesupport
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/Foundation.bridgesupport
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreGraphics.bridgesupport
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreFoundation.bridgesupport
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/CFNetwork.bridgesupport
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreAudio.bridgesupport
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/QuartzCore.bridgesupport
+- /Users/bengovero/Downloads/weak-block/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreServices.bridgesupport
+** Compiling =./app/app_delegate.rb=
+*** IR Generation
+#+begin_src sh
+  /usr/bin/env OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES RM_DATADIR_PATH="/Library/RubyMotion/data/ios/15.0" VM_PLATFORM="iPhoneSimulator" VM_KERNEL_PATH="/Library/RubyMotion/data/ios/15.0/iPhoneSimulator/kernel-x86_64.bc" VM_OPT_LEVEL="0" /usr/bin/arch -arch x86_64 "/Library/RubyMotion/bin/ruby" --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/RubyMotion.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/UIKit.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/Foundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreGraphics.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreFoundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CFNetwork.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreAudio.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/QuartzCore.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreServices.bridgesupport"  --project_dir "/Users/bengovero/Downloads/weak-block" --emit-llvm-fast ""
+  ./build/iPhoneSimulator-15.0-Development/objs/Users/bengovero/Downloads/weak-block/app/app_delegate.rb.x86_64.s
+  MREP_9F9ABBE7E1B04CB0B10D57079E1F8F71
+  /Users/bengovero/Downloads/weak-block/app/app_delegate.rb
+#+end_src
+*** Bitcode Generation
+#+begin_src sh
+  /Applications/Xcode-13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -mios-simulator-version-min=15.0 -fexceptions -c -arch x86_64 "./build/iPhoneSimulator-15.0-Development/objs/Users/bengovero/Downloads/weak-block/app/app_delegate.rb.x86_64.s" -o "./build/iPhoneSimulator-15.0-Development/objs/Users/bengovero/Downloads/weak-block/app/app_delegate.rb.x86_64.o"
+#+end_src
+*** Compilation Result: Succeeded
+    :PROPERTIES:
+    :result: :success
+    :start_time: 11:33:42.656
+    :end_time: 11:33:43.126
+    :duration: 0.470536
+    :END:
+*** Fat Binary Generation.
+#+begin_src sh
+  /usr/bin/lipo -create "./build/iPhoneSimulator-15.0-Development/objs/Users/bengovero/Downloads/weak-block/app/app_delegate.rb.x86_64.o" -output "./build/iPhoneSimulator-15.0-Development/objs/Users/bengovero/Downloads/weak-block/app/app_delegate.rb.o"
+#+end_src
+** Generating =init.mm=
+#+begin_src objective-c
+  #import <Foundation/Foundation.h>
+  
+  extern "C" {
+  void ruby_init(void);
+  void ruby_init_loadpath(void);
+  void ruby_script(const char *);
+  void *rb_vm_top_self(void);
+  void rb_define_global_const(const char *, void *);
+  void rb_rb2oc_exc_handler(void);
+  void ruby_init_device_repl(void);
+  void MREP_9F9ABBE7E1B04CB0B10D57079E1F8F71(void *, void *);
+  int rm_repl_port = 58607;
+  }
+  
+  extern "C"
+  void
+  RubyMotionInit(int argc, char **argv)
+  {
+  static bool initialized = false;
+  if (!initialized) {
+  ruby_init();
+  ruby_init_loadpath();
+  if (argc > 0) {
+  const char *progname = argv[0];
+  ruby_script(progname);
+  }
+  #if !__LP64__
+  try {
+  #endif
+  void *self = rb_vm_top_self();
+  ruby_init_device_repl();
+  rb_define_global_const("RUBYMOTION_ENV", @"development");
+  rb_define_global_const("RUBYMOTION_VERSION", @"7.21");
+  MREP_9F9ABBE7E1B04CB0B10D57079E1F8F71(self, 0);
+  #if !__LP64__
+  }
+  catch (...) {
+  rb_rb2oc_exc_handler();
+  }
+  #endif
+  initialized = true;
+  }
+  }
+#+end_src
+** Compiling =init.mm=
+#+begin_src sh
+  /Applications/Xcode-13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ "./build/iPhoneSimulator-15.0-Development/objs/init.mm" -arch x86_64 -isysroot "/Applications/Xcode-13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk" -F/Applications/Xcode-13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/System/Library/Frameworks -mios-simulator-version-min=15.0 -O0 -fexceptions -fblocks -fmodules -g -fobjc-legacy-dispatch -fobjc-abi-version=2 -c -o "./build/iPhoneSimulator-15.0-Development/objs/init.o"
+#+end_src
+** Generating =main.mm=
+#+begin_src objective-c
+  #import <Foundation/Foundation.h>
+  
+  extern "C" {
+  void ruby_init(void);
+  void ruby_init_loadpath(void);
+  void ruby_script(const char *);
+  void *rb_vm_top_self(void);
+  void rb_define_global_const(const char *, void *);
+  void rb_rb2oc_exc_handler(void);
+  void ruby_init_device_repl(void);
+  void MREP_9F9ABBE7E1B04CB0B10D57079E1F8F71(void *, void *);
+  int rm_repl_port = 58607;
+  }
+  
+  extern "C"
+  void
+  RubyMotionInit(int argc, char **argv)
+  {
+  static bool initialized = false;
+  if (!initialized) {
+  ruby_init();
+  ruby_init_loadpath();
+  if (argc > 0) {
+  const char *progname = argv[0];
+  ruby_script(progname);
+  }
+  #if !__LP64__
+  try {
+  #endif
+  void *self = rb_vm_top_self();
+  ruby_init_device_repl();
+  rb_define_global_const("RUBYMOTION_ENV", @"development");
+  rb_define_global_const("RUBYMOTION_VERSION", @"7.21");
+  MREP_9F9ABBE7E1B04CB0B10D57079E1F8F71(self, 0);
+  #if !__LP64__
+  }
+  catch (...) {
+  rb_rb2oc_exc_handler();
+  }
+  #endif
+  initialized = true;
+  }
+  }
+#+end_src
+** Creating app.
+*** Linking
+#+begin_src sh
+  /Applications/Xcode-13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -o "./build/iPhoneSimulator-15.0-Development/weak-block.app/weak-block"  -filelist "/var/folders/t4/vq4gr5zs6s1g1czjgk241_g80000gn/T/linker-objs-list20210924-51475-5ya32r" -arch x86_64 -isysroot "/Applications/Xcode-13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk" -F/Applications/Xcode-13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/System/Library/Frameworks -mios-simulator-version-min=15.0 -Wl,-no_pie -L"/Library/RubyMotion/data/ios/15.0/iPhoneSimulator" -lrubymotion-static -lobjc -licucore -stdlib=libc++  -framework UIKit -framework Foundation -framework CoreGraphics -framework CoreFoundation -framework CFNetwork -framework CoreAudio -framework QuartzCore -framework CoreServices
+#+end_src
+* Compiling Asset Bundles
+** Command
+#+begin_src sh
+  "/Applications/Xcode-13.app/Contents/Developer/usr/bin/actool" --output-format human-readable-text --notices --warnings --platform iphoneos --minimum-deployment-target 15.0 --target-device iphone --target-device ipad  --app-icon 'AppIcon' --launch-image 'LaunchImage' --output-partial-info-plist '/Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/AssetCatalog-Info.plist' --compress-pngs --compile "/Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app" "/Users/bengovero/Downloads/weak-block/resources/Assets.xcassets"
+#+end_src
+
+#+begin_src xml
+  2021-09-24 11:33:44.064 ibtoold[51167:8228369] DEBUG: Added to environment: {
+  TMPDIR = "/var/folders/t4/vq4gr5zs6s1g1czjgk241_g80000gn/T/1894536A-8127-4199-A63A-A34EF2F80FCA";
+  }
+  /* com.apple.actool.document.warnings */
+  /Users/bengovero/Downloads/weak-block/resources/Assets.xcassets:./LaunchImage.launchimage: warning: Launch images are deprecated in iOS 13.0. Use a launch storyboard or XIB instead.
+  /Users/bengovero/Downloads/weak-block/resources/Assets.xcassets:./LaunchImage.launchimage/(null)[2d][Default-375w-667h@2x.png]: warning: The launch image set "LaunchImage" has 2 unassigned children.
+  /* com.apple.actool.document.notices */
+  /Users/bengovero/Downloads/weak-block/resources/Assets.xcassets:./AppIcon.appiconset/[][ipad][76x76][][][1x][][][]: notice: 76x76@1x app icons only apply to iPad apps targeting releases of iOS prior to 10.0.
+  /* com.apple.actool.compilation-results */
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/AssetCatalog-Info.plist
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/AppIcon60x60@2x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/AppIcon76x76@2x~ipad.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/Assets.car
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-1100-Portrait-2436h@3x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-700-568h@2x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-700-Portrait@2x~ipad.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-700-Portrait~ipad.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-700@2x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-800-667h@2x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-800-Portrait-736h@3x.png
+  
+#+end_src
+* Writing Info.plist =./build/iPhoneSimulator-15.0-Development/weak-block.app/Info.plist=
+#+begin_src xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+  <dict>
+  <key>BuildMachineOSBuild</key>
+  <string>20F71</string>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleName</key>
+  <string>weak-block</string>
+  <key>CFBundleDisplayName</key>
+  <string>weak-block</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.yourcompany.weak-block</string>
+  <key>CFBundleExecutable</key>
+  <string>weak-block</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0</string>
+  <key>CFBundleSignature</key>
+  <string>????</string>
+  <key>CFBundleVersion</key>
+  <string>1.0</string>
+  <key>CFBundleIcons</key>
+  <dict>
+  <key>CFBundlePrimaryIcon</key>
+  <dict>
+  <key>CFBundleIconName</key>
+  <string>AppIcon</string>
+  <key>CFBundleIconFiles</key>
+  <array>
+  <string>AppIcon60x60</string>
+  </array>
+  </dict>
+  </dict>
+  <key>CFBundleIcons~ipad</key>
+  <dict>
+  <key>CFBundlePrimaryIcon</key>
+  <dict>
+  <key>CFBundleIconName</key>
+  <string>AppIcon</string>
+  <key>CFBundleIconFiles</key>
+  <array>
+  <string>AppIcon60x60</string>
+  <string>AppIcon76x76</string>
+  </array>
+  </dict>
+  </dict>
+  <key>UIRequiresFullScreen</key>
+  <true/>
+  <key>ITSAppUsesNonExemptEncryption</key>
+  <false/>
+  <key>UILaunchImages</key>
+  <array>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-1100-Portrait-2436h</string>
+  <key>UILaunchImageSize</key>
+  <string>{375, 812}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>11.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-800-Portrait-736h</string>
+  <key>UILaunchImageSize</key>
+  <string>{414, 736}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>8.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-800-667h</string>
+  <key>UILaunchImageSize</key>
+  <string>{375, 667}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>8.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-700</string>
+  <key>UILaunchImageSize</key>
+  <string>{320, 480}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>7.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-700-568h</string>
+  <key>UILaunchImageSize</key>
+  <string>{320, 568}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>7.0</string>
+  </dict>
+  <dict>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageName</key>
+  <string>LaunchImage-700-Portrait</string>
+  <key>UILaunchImageSize</key>
+  <string>{768, 1024}</string>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>7.0</string>
+  </dict>
+  </array>
+  <key>MinimumOSVersion</key>
+  <string>15.0</string>
+  <key>CFBundleSupportedPlatforms</key>
+  <array>
+  <string>iPhoneOS</string>
+  </array>
+  <key>CFBundleIconFiles</key>
+  <array>
+  <string>AppIcon60x60</string>
+  </array>
+  <key>UIAppFonts</key>
+  <array>
+  </array>
+  <key>UIDeviceFamily</key>
+  <array>
+  <integer>1</integer>
+  <integer>2</integer>
+  </array>
+  <key>UISupportedInterfaceOrientations</key>
+  <array>
+  <string>UIInterfaceOrientationPortrait</string>
+  </array>
+  <key>UIStatusBarStyle</key>
+  <string>UIStatusBarStyleDefault</string>
+  <key>UIBackgroundModes</key>
+  <array>
+  </array>
+  <key>DTXcode</key>
+  <string>0130</string>
+  <key>DTXcodeBuild</key>
+  <string>13A233</string>
+  <key>DTSDKName</key>
+  <string>iphonesimulator15.0</string>
+  <key>DTSDKBuild</key>
+  <string>19A339</string>
+  <key>DTPlatformName</key>
+  <string>iphonesimulator</string>
+  <key>DTCompiler</key>
+  <string>com.apple.compilers.llvm.clang.1_0</string>
+  <key>DTPlatformVersion</key>
+  <string>15.0</string>
+  <key>DTPlatformBuild</key>
+  <string>19A339</string>
+  </dict>
+  </plist>
+#+end_src

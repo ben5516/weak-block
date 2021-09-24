@@ -1,0 +1,4 @@
+** Compiling =init.mm=
+#+begin_src sh
+  /Applications/Xcode-13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ "./build/iPhoneSimulator-15.0-Development/objs/init.mm" -arch x86_64 -isysroot "/Applications/Xcode-13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk" -F/Applications/Xcode-13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/System/Library/Frameworks -mios-simulator-version-min=15.0 -O0 -fexceptions -fblocks -fmodules -g -fobjc-legacy-dispatch -fobjc-abi-version=2 -c -o "./build/iPhoneSimulator-15.0-Development/objs/init.o"
+#+end_src

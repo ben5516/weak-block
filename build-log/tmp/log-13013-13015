@@ -1,0 +1,28 @@
+** Command
+#+begin_src sh
+  "/Applications/Xcode-13.app/Contents/Developer/usr/bin/actool" --output-format human-readable-text --notices --warnings --platform iphoneos --minimum-deployment-target 15.0 --target-device iphone --target-device ipad  --app-icon 'AppIcon' --launch-image 'LaunchImage' --output-partial-info-plist '/Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/AssetCatalog-Info.plist' --compress-pngs --compile "/Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app" "/Users/bengovero/Downloads/weak-block/resources/Assets.xcassets"
+#+end_src
+
+#+begin_src xml
+  2021-09-24 11:33:44.064 ibtoold[51167:8228369] DEBUG: Added to environment: {
+  TMPDIR = "/var/folders/t4/vq4gr5zs6s1g1czjgk241_g80000gn/T/1894536A-8127-4199-A63A-A34EF2F80FCA";
+  }
+  /* com.apple.actool.document.warnings */
+  /Users/bengovero/Downloads/weak-block/resources/Assets.xcassets:./LaunchImage.launchimage: warning: Launch images are deprecated in iOS 13.0. Use a launch storyboard or XIB instead.
+  /Users/bengovero/Downloads/weak-block/resources/Assets.xcassets:./LaunchImage.launchimage/(null)[2d][Default-375w-667h@2x.png]: warning: The launch image set "LaunchImage" has 2 unassigned children.
+  /* com.apple.actool.document.notices */
+  /Users/bengovero/Downloads/weak-block/resources/Assets.xcassets:./AppIcon.appiconset/[][ipad][76x76][][][1x][][][]: notice: 76x76@1x app icons only apply to iPad apps targeting releases of iOS prior to 10.0.
+  /* com.apple.actool.compilation-results */
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/AssetCatalog-Info.plist
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/AppIcon60x60@2x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/AppIcon76x76@2x~ipad.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/Assets.car
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-1100-Portrait-2436h@3x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-700-568h@2x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-700-Portrait@2x~ipad.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-700-Portrait~ipad.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-700@2x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-800-667h@2x.png
+  /Users/bengovero/Downloads/weak-block/build/iPhoneSimulator-15.0-Development/weak-block.app/LaunchImage-800-Portrait-736h@3x.png
+  
+#+end_src

@@ -1,0 +1,4 @@
+*** Fat Binary Generation.
+#+begin_src sh
+  /usr/bin/lipo -create "./build/iPhoneSimulator-15.0-Development/objs/Users/bengovero/Downloads/weak-block/app/app_delegate.rb.x86_64.o" -output "./build/iPhoneSimulator-15.0-Development/objs/Users/bengovero/Downloads/weak-block/app/app_delegate.rb.o"
+#+end_src

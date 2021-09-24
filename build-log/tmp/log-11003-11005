@@ -1,0 +1,7 @@
+*** IR Generation
+#+begin_src sh
+  /usr/bin/env OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES RM_DATADIR_PATH="/Library/RubyMotion/data/ios/15.0" VM_PLATFORM="iPhoneSimulator" VM_KERNEL_PATH="/Library/RubyMotion/data/ios/15.0/iPhoneSimulator/kernel-x86_64.bc" VM_OPT_LEVEL="0" /usr/bin/arch -arch x86_64 "/Library/RubyMotion/bin/ruby" --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/RubyMotion.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/UIKit.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/Foundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreGraphics.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreFoundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CFNetwork.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreAudio.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/QuartzCore.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/15.0/BridgeSupport/CoreServices.bridgesupport"  --project_dir "/Users/bengovero/Downloads/weak-block" --emit-llvm-fast ""
+  ./build/iPhoneSimulator-15.0-Development/objs/Users/bengovero/Downloads/weak-block/app/app_delegate.rb.x86_64.s
+  MREP_9F9ABBE7E1B04CB0B10D57079E1F8F71
+  /Users/bengovero/Downloads/weak-block/app/app_delegate.rb
+#+end_src
